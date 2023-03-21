@@ -40,10 +40,12 @@ class ConversationsNotifier extends ChangeNotifier {
       notifyListeners();
 
       subscriptions.add(uClient.onConversationAdded.listen((event) {
+        print("CHECKPOING 1");
         getMyConversations();
       }));
 
       subscriptions.add(uClient.onConversationUpdated.listen((event) {
+        print("CHECKPOING 2");
         getMyConversations();
       }));
 

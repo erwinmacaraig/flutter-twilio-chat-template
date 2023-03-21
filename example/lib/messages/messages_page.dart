@@ -27,6 +27,8 @@ class _MessagesPageState extends State<MessagesPage> {
 
   @override
   Widget build(BuildContext context) {
+    print(")))))(((((((())))))))");
+    print('Length of messages is ${messagesNotifier.messages.length}');
     return ChangeNotifierProvider<MessagesNotifier>.value(
       value: messagesNotifier,
       child: Consumer<MessagesNotifier>(
@@ -41,7 +43,9 @@ class _MessagesPageState extends State<MessagesPage> {
                 title: InkWell(
                     onLongPress: _updateFriendlyName,
                     onDoubleTap: _updateUniqueName,
-                    child: Text(widget.conversation.friendlyName ?? '')),
+                    child: Text(
+                        '${widget.conversation.friendlyName} - ${messagesNotifier.messages.length}' ??
+                            '')),
                 actions: [
                   _buildOverflowButton(),
                 ],

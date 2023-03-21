@@ -34,7 +34,12 @@ class MessagesNotifier extends ChangeNotifier {
     messageInputTextController.addListener(conversation.typing);
 
     startingIndex = conversation.lastMessageIndex ?? 0;
+
     subscriptions.add(conversation.onMessageAdded.listen((message) {
+      print(
+          "********************* A new message has arrived ********************");
+      print(message.body);
+      print('=====================================');
       messages.insert(0, message);
       final messageIndex = message.messageIndex;
       if (messageIndex != null) {
@@ -45,6 +50,7 @@ class MessagesNotifier extends ChangeNotifier {
         _getMedia(message);
       }
     }));
+
     subscriptions.add(conversation.onMessageDeleted.listen((message) {
       loadConversation();
     }));
@@ -52,6 +58,7 @@ class MessagesNotifier extends ChangeNotifier {
       loadConversation();
     }));
     subscriptions.add(conversation.onTypingStarted.listen((event) {
+      print("I AM TYPING....");
       final identity = event.participant.identity;
       if (identity != null) {
         currentlyTyping.add(identity);

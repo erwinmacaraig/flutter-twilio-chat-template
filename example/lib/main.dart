@@ -53,7 +53,8 @@ class MyApp extends StatelessWidget {
                         //         TwilioChatTokenRequest(
                         //             identity: conversationsNotifier.identity)))
                         //     ?.token;
-
+                        jwtToken =
+                            'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzcxZjE4ZTljZTlhOTlhYTYxZDAzZGE4ZDA0ZWZlNDU2LTE2NzkzOTEyMDMiLCJpc3MiOiJTSzcxZjE4ZTljZTlhOTlhYTYxZDAzZGE4ZDA0ZWZlNDU2Iiwic3ViIjoiQUNlMjM4MzViYTI2YWQ0ZTRhMGRmZDIxNDMyYWJhYzA3ZiIsImV4cCI6MTY3OTM5NDgwMywiZ3JhbnRzIjp7ImlkZW50aXR5IjoiOTAyRjRBIiwiY2hhdCI6eyJzZXJ2aWNlX3NpZCI6IklTYzUzODVjYzIwYTllNDlmNWE0ZTRlZmQ2MWZiZWUyOTMiLCJwdXNoX2NyZWRlbnRpYWxfc2lkIjoiQ1I3YmY1MmE4NDBlYzMwZTg3YmMzNTAyYWM1NjUyZjk1OCJ9fX0.RFJ7Eyq3DttpXoLQi-5TZFMuU0Gvdo5AUgLtToXFYhY';
                         if (jwtToken == null) {
                           return;
                         }
@@ -75,8 +76,10 @@ class MyApp extends StatelessWidget {
                         //         TwilioChatTokenRequest(
                         //             identity: conversationsNotifier.identity)))
                         //     ?.token; // <Set your JWT token here>
-
+                        jwtToken =
+                            'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzcxZjE4ZTljZTlhOTlhYTYxZDAzZGE4ZDA0ZWZlNDU2LTE2NzkzOTEyMDMiLCJpc3MiOiJTSzcxZjE4ZTljZTlhOTlhYTYxZDAzZGE4ZDA0ZWZlNDU2Iiwic3ViIjoiQUNlMjM4MzViYTI2YWQ0ZTRhMGRmZDIxNDMyYWJhYzA3ZiIsImV4cCI6MTY3OTM5NDgwMywiZ3JhbnRzIjp7ImlkZW50aXR5IjoiOTAyRjRBIiwiY2hhdCI6eyJzZXJ2aWNlX3NpZCI6IklTYzUzODVjYzIwYTllNDlmNWE0ZTRlZmQ2MWZiZWUyOTMiLCJwdXNoX2NyZWRlbnRpYWxfc2lkIjoiQ1I3YmY1MmE4NDBlYzMwZTg3YmMzNTAyYWM1NjUyZjk1OCJ9fX0.RFJ7Eyq3DttpXoLQi-5TZFMuU0Gvdo5AUgLtToXFYhY';
                         if (jwtToken == null) {
+                          debugPrint('I am here!!');
                           return;
                         }
 
